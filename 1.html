@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo digital do Foodtruck Burgers. Confira hambúrgueres, acompanhamentos, bebidas e sobremesas.">
+    <title>Catálogo Digital - Foodtruck Burgers</title>
+    <link rel="stylesheet" href="index.css">
+    
+    <style>
+        /* Configuração de rolagem suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* MENU DE NAVEGAÇÃO INTERCALADO */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Coloca os itens um ao lado do outro */
+            width: 100%;
+        }
+
+        nav ul li {
+            flex: 1; /* Faz todos os botões terem o mesmo tamanho */
+            text-align: center;
+        }
+
+        /* Cores intercaladas (Azul Claro 1 e 2) */
+        nav ul li:nth-child(odd) {
+            background-color: #e6f2ff; /* Tons ímpares */
+        }
+
+        nav ul li:nth-child(even) {
+            background-color: #cfe2f3; /* Tons pares */
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 0;
+            text-decoration: none;
+            color: #003366; /* Azul escuro para o texto */
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        /* Efeito de destaque ao passar o mouse no menu */
+        nav ul li a:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        /* BOTÃO TOPO FIXO */
+        .btn-topo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border: none;
+        }
+
+        .btn-topo:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body id="inicio">
+
+    <header>
+        <h1>Foodtruck Burgers</h1>
+        <p>Catálogo Digital</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#vitrine">Vitrine</a></li>
+            <li><a href="#tabela">Tabela</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="inicio-content" style="padding: 20px;">
+            <h2>Bem-vindo ao Foodtruck do ADA</h2>
+            <p>Confira nossos hambúrgueres artesanais, acompanhamentos suculutentos, bebidas especiais e sobremesas deliciosas </p>
+        </section>
+
+        <aside style="padding: 20px; background: #f9f9f9; border-left: 5px solid blue; margin: 20px;">
+            <h3>Combos</h3>
+            <p style="color: red; font-weight: bold; font-family: arial;">Hambúrguer + Batata + Refrigerante por R$35,00</p>
+        </aside>
+
+        <section id="vitrine" style="padding: 20px;">
+            <h2>Vitrine de Produtos</h2>
+            <div class="produtos">
+                <article class="card">
+                    <figure>
+                        <img src="imgclassico.jpg" alt="Clássico da Casa">
+                        <figcaption>Clássico da Casa</figcaption>
+                    </figure>
+                    <p>Pão brioche, carne bovina, queijo cheddar, alface, tomate e molho especial.</p>
+                    <p class="preco">R$25,00</p>
+                </article>
+                <article class="card">
+                    <figure>
+                        <img src="barbecue-bacon.jpg" width="15%" alt="Barbecue Bacon">
+                        <figcaption>Barbecue Bacon</figcaption>
+                    </figure>
+                    <p>Carne bovina, queijo prato, cebola caramelizada, bacon crocante e molho barbecue.</p>
+                    <p class="preco">R$28,00</p>
+                </article>
+                <article class="card">
+                    <figure>
+                        <img src="veggie.jpg" width="15%" alt="Veggie Grill">
+                        <figcaption>Veggie Grill</figcaption>
+                    </figure>
+                    <p>Hambúrguer de grão-de-bico e legumes grelhados, queijo vegano e rúcula.</p>
+                    <p class="preco">R$26,00</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="tabela" style="padding: 20px;">
+            <h2>Tabela de Preços</h2>
+            <table border="2" style="width:100%; border-collapse: collapse; text-align: left;">
+                <thead>
+                    <tr style="background-color: #eee;">
+                        <th>Categoria</th>
+                        <th>Item</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="color: red">Duplo Búrguer</td>
+                        <td style="color: red;">Clássico da Casa</td>
+                        <td style="color: red;">R$25,00</td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(1, 88, 30)">BBBúrguer</td>
+                        <td style="color: rgb(1, 88, 30);">Barbecue Bacon</td>
+                        <td style="color: rgb(1, 88, 30);">R$28,00</td>
+                    </tr>
+                    <tr>
+                        <td style="color: rgb(221, 75, 7)">Acompanhamentos</td>
+                        <td style="color: rgb(221, 75, 7);">Batata Frita</td>
+                        <td style="color: rgb(221, 75, 7);">R$12,00</td>
+                    </tr>
+                    <tr>
+                            <td style="color: rgb(97, 0, 187)">Bebidas</td>
+                        <td style="color: rgb(97, 0, 187);">Refrigerante</td>
+                        <td style="color: rgb(97, 0, 187);">R$6,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contato" style="padding: 20px;">
+            <h2>Solicite seu pedido</h2>
+            <form>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <label for="nome">Nome:</label><br>
+                    <input id="nome" type="text" required style="width: 100%; margin-bottom: 10px;">
+                    <br>
+                    <label for="email">E-mail:</label><br>
+                    <input id="email" type="email" required style="width: 100%; margin-bottom: 10px;">
+                    <br>
+                    <label for="telefone">Telefone:</label><br>
+                    <input id="telefone" type="tel" style="width: 100%; margin-bottom: 10px;">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pedido</legend>
+                    <label for="produto">Produto:</label><br>
+                    <select id="produto" required style="width: 100%; margin-bottom: 10px;">
+                        <option value="">Selecione</option>
+                        <option>Clássico da Casa</option>
+                        <option>Barbecue Bacon</option>
+                        <option>Veggie Grill</option>
+                    </select>
+                    <br>
+                    <label for="quantidade">Quantidade:</label><br>
+                    <input id="quantidade" type="number" style="width: 100%; margin-bottom: 10px;">
+                    <br>
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea id="mensagem" style="width: 100%; height: 80px;"></textarea>
+                </fieldset>
+                <br>
+                <button type="submit" style="padding: 10px 20px; cursor: pointer;">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer style="padding: 20px; background: #333; color: white; margin-top: 50px;">
+        <p>Endereço: Bloco A Lotes 3/4, 70092-900, Brasília - DF, Brasil</p>
+        <p>Contato: contato@foodtruckburgers.com</p>
+        <p>&copy; 2026 Foodtruck Burgers</p>
+    </footer>
+
+    <a href="#inicio" class="btn-topo">Topo</a>
+
+</body>
+</html>
